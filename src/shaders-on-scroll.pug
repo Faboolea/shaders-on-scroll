@@ -1,0 +1,21 @@
+.scroll__stage
+  .scroll__content
+  
+    - const sections = ['Logma', 'Naos', 'Chara']
+      each section, index in sections
+      
+        section.section
+          .section__title
+            h1.section__title-number= index < 9 ? `0${index + 1}` : index + 1
+            
+            h2.section__title-text= section
+            
+            if(index === 0)
+              p.section__title-arrow
+                span ➤
+                br
+                span ➤
+          
+          p.section__paragraph The fireball that we rode was moving – But now we've got a new machine – They got music in the solar system
+            br
+            a.section__button Discover
